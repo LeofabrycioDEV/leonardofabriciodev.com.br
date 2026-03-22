@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Leonardo Fabrício | Portfólio Profissional</title>
+  <title>Leonardo Fabrício | Desenvolvedor Front-End</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Desenvolvedor Front-End e Analista de TI com experiência em sistemas web, dashboards e automação de processos.">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
@@ -16,12 +21,7 @@
       font-family: 'Poppins', sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      line-height: 1.6;
       background-color: #f5f7fa;
       color: #333;
     }
@@ -33,31 +33,19 @@
       padding: 2rem 0;
     }
 
-    /* Cabeçalho/menu */
     .header {
       position: sticky;
       top: 0;
-      z-index: 999;
-      background: rgba(30, 60, 114, 0.95);
-      /* azul escuro translúcido */
-      backdrop-filter: blur(6px);
-      color: #e0f3ff;
+      background: #1e3c72;
+      color: #fff;
       padding: 1rem 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      transition: background 0.3s ease-in-out;
+      z-index: 999;
     }
 
     .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: #e0f3ff;
     }
 
     .logo span {
@@ -67,646 +55,166 @@
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .nav-links a {
-      color: #e0f3ff;
+      color: #fff;
       text-decoration: none;
-      font-size: 1rem;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      transition: background 0.3s, color 0.3s, border-bottom 0.3s;
-      border-bottom: 3px solid transparent;
     }
 
-    .nav-links a:hover {
-      background-color: #00bcd4;
-      color: #111;
-      border-bottom: 3px solid #00bcd4;
-    }
-
-    .nav-links a.active {
-      border-bottom: 3px solid #00bcd4;
-      font-weight: 600;
-      color: #00bcd4;
-    }
-
-    /* Hero */
+    /* HERO */
     .hero {
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: #fff;
       padding: 5rem 0;
-    }
-
-    .hero-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
     }
 
     .profile-pic img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
+      width: 180px;
       border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .hero-text h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-size: 2.8rem;
     }
 
     .hero-text h2 {
-      font-size: 1.3rem;
-      font-weight: 300;
-      color: #d0ecff;
-      margin: 0.7rem 0 1.2rem;
+      color: #00e5ff;
+      margin: 10px 0;
     }
 
-    .hero-text p {
-      max-width: 600px;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-      color: #e0f3ff;
-    }
-
-    .socials a {
+    .btn-primary {
       display: inline-block;
-      margin: 0.4rem;
-      padding: 0.5rem 1rem;
-      background: rgba(255, 255, 255, 0.1);
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #00bcd4;
+      color: #111;
       border-radius: 30px;
-      color: #fff;
-      font-weight: 500;
       text-decoration: none;
-      transition: all 0.3s;
     }
 
-    .socials a:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-    }
-
-    /* Sections */
     .section {
       padding: 4rem 0;
     }
 
-    .azul-claro {
-      background-color: #e7f4ff;
-      color: #222;
-    }
-
-    .azul-escuro {
-      background-color: #1e3c72;
-      color: #fff;
-    }
-
-    .azul-escuro h2 {
-      color: #00cfff;
-    }
-
-    .azul-claro h2,
-    .azul-escuro h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    /* Accordion experiência */
-    .accordion {
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgb(0 0 0 / 0.25);
-    }
-
-    .accordion-item+.accordion-item {
-      border-top: 1px solid #00cfff44;
-    }
-
-    .accordion-header {
-      width: 100%;
-      background: #004a8f;
-      color: #d0ecff;
-      cursor: pointer;
-      padding: 1rem 1.5rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-align: left;
-      border: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background-color 0.3s ease;
-      user-select: none;
-      border-radius: 0;
-    }
-
-    .accordion-header:hover,
-    .accordion-header[aria-expanded="true"] {
-      background: #007acc;
-      color: #fff;
-    }
-
-    .accordion-icon {
-      font-weight: 900;
-      font-size: 1.5rem;
-      line-height: 1;
-      transition: transform 0.3s ease;
-      user-select: none;
-    }
-
-    .accordion-header[aria-expanded="true"] .accordion-icon {
-      transform: rotate(45deg);
-    }
-
-    .accordion-content {
-      padding: 1rem 2rem;
-      background: #0f2749;
-      color: #cde9ff;
-      line-height: 1.5;
-      font-size: 1rem;
-      overflow: hidden;
-      animation: fadeIn 0.35s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* Depoimentos */
-    #depoimentos {
-      background-color: #ffffff;
-      color: #222;
-    }
-
-    #depoimentos h2 {
-      color: #1e3c72;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .testimonial-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .testimonial-card {
-      background: #e7f4ff;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 1rem;
-      color: #333;
-      text-align: center;
-      flex-grow: 1;
-    }
-
-    .testimonial-company {
-      font-weight: 600;
-      color: #00bcd4;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .testimonial-video {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      outline: none;
-    }
-
-    /* Projetos */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
     }
 
     .project-card {
-      background-color: #fff;
-      padding: 1.5rem;
+      background: #fff;
+      padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .project-card h3 {
-      color: #1e3c72;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-card a {
-      display: inline-block;
-      margin-top: 0.7rem;
-      color: #007acc;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .project-card a:hover {
-      text-decoration: underline;
     }
 
     .project-video {
-      margin-top: 1rem;
       width: 100%;
+      margin-top: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      outline: none;
     }
 
-    /* Contato */
-    #contato p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      color: #1e3c72;
-      font-weight: 600;
-    }
-
-    .contact-info p {
-      margin: 0.5rem 0;
-      font-size: 1rem;
-      color: #004a8f;
-    }
-
-    .contact-info a {
-      color: #007acc;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    .contact-info a:hover {
-      color: #00bcd4;
-      text-decoration: underline;
-    }
-
-    /* Rodapé */
     .footer {
-      background-color: #004a8f;
-      color: #ffffff;
       text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-    }
-
-    @media (min-width: 768px) {
-      .hero-container {
-        flex-direction: row;
-        text-align: left;
-        gap: 2rem;
-      }
-
-      .hero-text {
-        max-width: 600px;
-      }
-
-      .profile-pic {
-        flex-shrink: 0;
-      }
+      padding: 1rem;
+      background: #1e3c72;
+      color: #fff;
     }
   </style>
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <body>
+
   <header class="header">
     <div class="container header-container">
       <div class="logo">Leonardo<span>Fabrício</span></div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#inicio" class="active">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="inicio">
-    <div class="container hero-container">
+    <div class="container">
       <div class="profile-pic">
-        <img src="leo.jpeg" alt="Foto de Leonardo Fabrício" />
+        <img src="leo.jpeg" alt="Leonardo">
       </div>
+
       <div class="hero-text">
-        <h1>Olá, visitante!👏</h1>
-        <h2>Analista de TI | Desenvolvedor Front-End</h2>
-        <p>Atuo há 15 anos em TI, desenvolvendo soluções como sistemas de controle, dashboards gerenciais e aplicações web com foco em performance e usabilidade.</p>
-        <div class="socials">
-          <a href="mailto:leonardofabrycio26@gmail.com">📧 E-mail</a>
-          <a href="https://www.linkedin.com/in/leonardo-fabr%C3%ADcio-88a89674?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-            target="_blank">🔗 LinkedIn</a>
-          <a href="https://wa.me/5586994167469?text=Olá,%20gostaria%20de%20falar%20com%20você." target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
+        <h1>Desenvolvedor Front-End & Analista de TI</h1>
+        <h2>Transformando problemas reais em soluções digitais</h2>
 
+        <p>
+          15+ anos de experiência em TI, desenvolvendo sistemas web, dashboards e automações.
+          Foco em performance, usabilidade e soluções que geram resultado.
+        </p>
 
-        </div>
+        <a href="#projetos" class="btn-primary">🚀 Ver Projetos</a>
       </div>
     </div>
   </section>
 
-  <section id="sobre" class="section azul-claro">
+  <!-- PROJETOS -->
+  <section id="projetos" class="section">
     <div class="container">
-      <h2>Sobre Mim</h2>
-      <p>Sou um profissional casado, com 32 anos, apaixonado por tecnologia e movido por desafios que envolvem inovação
-        e eficiência. Atualmente curso Gestão de TI e Análise de Sistemas, buscando constante aprimoramento técnico e
-        visão estratégica para aplicar soluções inteligentes no ambiente corporativo.
+      <h2>Projetos</h2>
 
-        Possuo sólida experiência em infraestrutura de redes, servidores Windows e Linux, suporte técnico a usuários e
-        manutenção de equipamentos. Atuo também com desenvolvimento web, utilizando HTML, CSS, JavaScript e Python, com
-        foco em automação, sistemas internos e interfaces funcionais.
-
-        
-
-        Tenho perfil analítico, proativo e colaborativo, sempre em busca de soluções modernas, seguras e escaláveis.
-        Prezo pela organização, pela melhoria contínua e por agregar valor por meio da tecnologia, contribuindo
-        diretamente para a produtividade e evolução dos processos nas empresas em que atuo.</p>
-    </div>
-  </section>
-
-  <section id="experiencia" class="section azul-escuro">
-    <div class="container">
-      <h2>Experiência Profissional</h2>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>2022 -  | Ferronorte Industrial - Analista de TI</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content" hidden>
-            <p>Segurança de rede, suporte técnico e desenvolvimento de sistemas personalizados para setores portarias,
-              gestão de terceirizados, frota e manutenção. Atuação com
-              firewalls (MikroTik e pfSense), controle de acesso. Responsável por projetos de ampliação de rede,
-              incluindo passagem de cabeamento
-              estruturado, instalação de racks, switches e totens de produção, além de apoio em homologações e
-              sustentação técnica. Atuando também na integração e treinamento de novos colaboradores, apresentando os
-              sistemas utilizados pela empresa e garantindo sua adaptação às ferramentas tecnológicas. Participo
-              ativamente de tomadas de decisão técnicas, com foco na melhoria contínua e alinhamento da TI às
-              necessidades operacionais.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>2021 - 2022 | Instituto Santo Augustinho - Gestor de TI</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content" hidden>
-            <p>Planejamento Estratégico de TI:
-
-              Definia metas e estratégias de tecnologia alinhadas aos objetivos da empresa.
-
-              Elaborava e gerenciava orçamentos de TI.
-
-              Planejava evolução tecnológica (curto, médio e longo prazo).
-
-              Redes e Conectividade:
-
-              Gerenciava estrutura de redes (LAN, WAN, Wi-Fi, VPN).
-
-              Garantia disponibilidade e segurança de dados.
-
-              Supervisionava monitoramento de rede, switches, roteadores e firewalls.
-
-              Infraestrutura de TI:
-
-              Era responsável por servidores, data centers, sistemas operacionais, armazenamento e backup.
-
-              Liderava projetos de atualização e modernização de infraestrutura.
-
-              Atuava com soluções on-premises e cloud (Azure, AWS, etc).
-
-              Liderança Técnica e Gestão de Equipes:
-
-              Coordenava times de TI (suporte, redes, segurança, desenvolvimento).
-
-              Desenvolvia e aplicava boas práticas (ITIL, COBIT, DevOps).
-
-              Promovia treinamentos e crescimento técnico da equipe.
-
-              Atuava como ponte entre áreas técnicas e diretoria/negócios.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>2015 - 2021 | Almaviva do Brasil - Suporte Técnico N1</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content" hidden>
-            <p>Suporte técnico, redes, infraestrutura e operações de TI, atuando
-              com VLANs, switches Cisco e Huawei, servidores (AD, DHCP, e-mail), discadores Avaya e sistemas
-              corporativos. Participei de implantações de grandes operações para empresas como Caixa, Vivo, Claro,
-              Latan, Nextel, TIM, Uber e Enel, realizando replicação de imagens para centenas de máquinas, configuração
-              de redes e scripts GPO para automação de ambientes.
-
-              Experiência com monitoramento de rede via Nagios, suporte a estações (hardware/software), treinamento de
-              novos colaboradores e preparação de ambientes operacionais. Atuava na homologação de sites e participei
-              ativamente de GMUDs, reuniões técnicas, e audioconferências com times de redes, telecom e NOC-TI.
-
-              Destaque para projeto de 2019: desenvolvimento de um ambiente virtualizado com múltiplas máquinas para
-              operação OI PROCON em home office, agregando agilidade e escalabilidade à empresa.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>2013 - 2014 | Ferronorte - Suporte de TI N1</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content" hidden>
-            <p>Atuação no suporte técnico ao sistema Winthor, manutenção de hardware e software, infraestrutura de rede
-              e conectividade em todas as lojas do grupo. Realizei viagens técnicas para implantação e hospedagem de
-              servidores AD (Parnaíba e Imperatriz) e migração de impressora fiscal (Santa Inês), garantindo gestão
-              centralizada de usuários e continuidade dos serviços. Experiência com banco de dados Oracle, configuração
-              de switches e atendimento a usuários com foco na resolução de problemas sistêmicos e operacionais.
-
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>2010 - 2012 | Microlins - Suporte Técnico N1 / Professor</span>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content" hidden>
-            <p>Atuação como professor de montagem e manutenção de computadores e notebooks, além de ministrar aulas de
-              digitação e informática para a terceira idade. Responsável pelo suporte técnico da escola, abrangendo
-              manutenção de hardware e software, gerenciamento da infraestrutura de rede, análise de conectividade e
-              monitoramento via Nagios. Experiência combinando ensino prático com atuação técnica em ambientes
-              educacionais e corporativos.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="depoimentos" class="section">
-    <div class="container">
-      <h2>Depoimentos</h2>
-      <div class="testimonial-container">
-        <div class="testimonial-card">
-          <div class="testimonial-text">"O Leonardo sempre se destacou pelo profissionalismo e entrega de soluções
-            eficazes para nossa infraestrutura de TI."</div>
-          <div class="testimonial-company">— Ferronorte Industrial</div>
-          <video class="testimonial-video" controls preload="metadata" width="100%" height="auto" poster="">
-            <source src="videos/ferronorte-feedback.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-text">"Gestão eficiente e liderança técnica exemplar. Leonardo é um grande parceiro
-            para nossos projetos de TI."</div>
-          <div class="testimonial-company">— Instituto Santo Augustinho</div>
-          <video class="testimonial-video" controls preload="metadata" width="100%" height="auto" poster="">
-            <source src="videos/isa-feedback.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-text">"Profissional dedicado e competente, sempre disposto a ajudar e inovar."</div>
-          <div class="testimonial-company">— Almaviva do Brasil</div>
-          <video class="testimonial-video" controls preload="metadata" width="100%" height="auto" poster="">
-            <source src="videos/almaviva-feedback.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projetos" class="section azul-claro">
-    <div class="container">
-      <h2>Meus Projetos</h2>
       <div class="projects-grid">
+
         <div class="project-card">
           <h3>Sistema de Controle de Chaves</h3>
-          <p>Cadastro de setores, registro de quem retirou a chave.</p>
-          <a href="#" target="_blank"></a>
-          <video class="project-video" controls preload="metadata" width="100%" height="auto" poster="">
-            <source src="videos/chaves.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
+          <p>Registro de retirada e devolução.</p>
+          <p><strong>Tecnologias:</strong> HTML, CSS, JS, PHP, MySQL</p>
+          <video class="project-video" controls>
+            <source src="videos/chaves.mp4" type="video/mp4">
           </video>
         </div>
+
         <div class="project-card">
-          <h3>Sistema de Controle de Terceiros e Visitantes na Empresa </h3>
-          <p>Registro de entrada e saída.</p>
-          <a href="#" target="_blank"></a>
-          <video class="project-video" controls preload="metadata" width="100%" height="auto" poster="">
-            <source src="videos/terceirizados.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
+          <h3>Controle de Visitantes</h3>
+          <p>Entrada e saída de terceiros.</p>
+          <p><strong>Tecnologias:</strong> HTML, JS, PHP</p>
+          <video class="project-video" controls>
+            <source src="videos/terceirizados.mp4" type="video/mp4">
           </video>
         </div>
+
         <div class="project-card">
-          <h3>Sistema de Controle de Frota de Carros</h3>
-          <p>Controle de saída e retorno dos veículo.</p>
-          <a href="#" target="_blank"></a>
-          <video class="project-video" controls preload="metadata" width="100%" height="auto" poster="">
-            <source src="Frota.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
+          <h3>Controle de Frota</h3>
+          <p>Gestão de veículos.</p>
+          <p><strong>Tecnologias:</strong> PHP, MySQL</p>
+          <video class="project-video" controls>
+            <source src="Frota.mp4" type="video/mp4">
           </video>
         </div>
-         <div class="project-card">
-          <h3>Desenvolvimento de Portal Interno para Gestão de TI e GMUD</h3>
-          <p> Portal Interno</p>
-          <a href="#" target="_blank"></a>
-          <video class="project-video" controls preload="metadata" width="100%" height="auto" poster="">
-            <source src="portal.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <section id="contato" class="section azul-claro">
+  <!-- CONTATO -->
+  <section id="contato" class="section">
     <div class="container">
       <h2>Contato</h2>
-      <p>Fique à vontade para entrar em contato para parcerias ou oportunidades.</p>
-      <div class="contact-info">
-        <p>Email: <a href="mailto:leonardofabrycio26@gmail.com">leonardofabrycio26@gmail.com</a></p>
-        <a href="https://wa.me/5586994167469?text=Olá,%20gostaria%20de%20falar%20com%20você." target="_blank">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-          <p>LinkedIn: <a
-              href="https://www.linkedin.com/in/leonardo-fabr%C3%ADcio-88a89674?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank">leonardofabrycio</a></p>
-      </div>
+      <p>Email: leonardofabrycio26@gmail.com</p>
+      <p>
+        <a href="https://www.linkedin.com/">LinkedIn</a> |
+        <a href="https://wa.me/5586994167469">WhatsApp</a>
+      </p>
     </div>
   </section>
 
   <footer class="footer">
-    &copy; 2025 Leonardo Fabrício. Todos os direitos reservados.
+    © 2025 Leonardo Fabrício
   </footer>
 
-  <script>
-    // Accordion da experiência
-    document.querySelectorAll('.accordion-header').forEach(button => {
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        const content = button.nextElementSibling;
-        if (!expanded) {
-          content.hidden = false;
-        } else {
-          content.hidden = true;
-        }
-      });
-    });
-
-    // Script para destacar link ativo no menu conforme scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    window.addEventListener('scroll', () => {
-      let scrollY = window.pageYOffset;
-
-      sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 70; // 70px considerando altura do header
-        const sectionId = section.getAttribute('id');
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + sectionId) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    });
-  </script>
 </body>
 
 </html>
-
-
